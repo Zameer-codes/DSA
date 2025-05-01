@@ -1,3 +1,5 @@
 .vs
 Algorithms/bin/
 Algorithms/obj/
+**/bin/*
+**/obj/*
