@@ -260,6 +260,65 @@ public static class Patterns
             Console.WriteLine();
         }
     }
+
+    public static void P19(int n){
+        int starCount = 0;
+        int spaceCount = 0;
+        for(int i =1; i<=2*n-1; i++){
+            starCount = i;
+            if(i>n){
+                starCount = 2*n-i;
+            }
+
+            spaceCount = 2*(n-i);
+            if(i>n){
+                spaceCount = 2*(i-n);
+            }
+
+            //initial stars
+            for(int j=1; j<=starCount; j++){
+                Console.Write("*");
+            }
+            //spaces
+            for(int j=1; j<=spaceCount; j++){
+                Console.Write(" ");
+            }
+
+            //ending stars
+            for(int j=1; j<=starCount; j++){
+                Console.Write("*");
+            }
+            Console.WriteLine();
+        }
+    }
+
+    public static void P20(int n){
+        for(int i=0; i<n; i++){
+            for(int j=0; j<n; j++){
+                if(i==0 || i==n-1 || j==0 || j==n-1){
+                    Console.Write("*");
+                }
+                else{
+                    Console.Write(" ");
+                }
+            }
+            Console.WriteLine();
+        }
+    }
+
+    public static void P21(int n){
+        for(int i=0; i<2*n-1; i++){
+            for(int j=0; j<2*n-1; j++){
+                int top = i;
+                int left = j;
+                int right = 2*n-1-j-1;
+                int bottom = 2*n-1-i-1;
+                int min = Math.Min(Math.Min(top, left), Math.Min(right, bottom));
+                Console.Write($"{n-min} ");
+            }
+            Console.WriteLine();
+        }
+    }
 }
 
 /*
@@ -400,6 +459,8 @@ then increment upto n
 
 
 no of lines : 2n
+
+-----------------------
 
 
 */

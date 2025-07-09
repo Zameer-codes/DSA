@@ -17,3 +17,6 @@ Patterns.P15(5);
 Patterns.P16(5);
 Patterns.P17(5);
 Patterns.P18(5);
+Patterns.P19(5);
+Patterns.P20(5);
+Patterns.P21(5);
